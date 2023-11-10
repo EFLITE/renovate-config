@@ -1,0 +1,14 @@
+{
+  "name": "renovate-config",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "RENOVATE_CONFIG_FILE=default.json renovate-config-validator"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "renovate": "^37.45.0"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":automergePatch",
+    ":automergeRequireAllStatusChecks",
+    ":dependencyDashboard",
+    ":disableRateLimiting",
+    ":ignoreModulesAndTests",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":separateMultipleMajorReleases",
+    ":timezone(Asia/Tokyo)",
+    ":label(renovate)",
+    "group:definitelyTyped",
+    "group:monorepos",
+    "group:linters",
+    "group:recommended",
+    "group:testNonMajor",
+    "workarounds:all"
+  ],
+  "schedule": ["before 6am on Monday"],
+  "packageRules": [
+    {
+      "description": "automerge github-actions",
+      "automerge": true,
+      "groupName": "GitHub Actions",
+      "major": {
+        "automerge": false
+      },
+      "matchManagers": ["github-actions"]
+    },
+    {
+      "groupName": "icons",
+      "matchPackagePatterns": ["unplugin-icons", "@iconify"],
+      "automerge": true
+    },
+    {
+      "groupName": "prettier",
+      "matchPackagePatterns": ["prettier"],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "extends": ["packages:linters", "packages:test"],
+      "matchPackagePrefixes": ["@types/"],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "groupName": "sveltekit",
+      "matchPackagePatterns": ["@sveltejs/kit", "@sveltejs/adapter"]
+    }
+  ],
+  "rangeStrategy": "bump"
+}
