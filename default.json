@@ -34,8 +34,9 @@
       "matchPackagePrefixes": ["@types/"]
     },
     {
-      "groupName": "svelte",
-      "matchPackagePatterns": ["svelte"]
+      "groupName": "sveltekit",
+      "matchPackagePatterns": ["@sveltejs"],
+      "matchPackageNames": ["svelte"]
     }
   ],
   "rangeStrategy": "bump"
