@@ -3,6 +3,7 @@
   "extends": [
     ":dependencyDashboard",
     ":ignoreModulesAndTests",
+    ":disableRateLimiting",
     ":semanticPrefixFixDepsChoreOthers",
     ":separateMultipleMajorReleases",
     ":timezone(Asia/Tokyo)",
