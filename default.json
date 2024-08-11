@@ -19,20 +19,19 @@
   "packageRules": [
     {
       "groupName": "icons",
-      "matchPackagePatterns": ["unplugin-icons", "@iconify"]
+      "matchPackageNames": ["/unplugin-icons/", "/@iconify/"]
     },
     {
       "groupName": "prettier",
-      "matchPackagePatterns": ["prettier"]
+      "matchPackageNames": ["/prettier/"]
     },
     {
       "extends": ["packages:linters", "packages:test"],
-      "matchPackagePrefixes": ["@types/"]
+      "matchPackageNames": ["/@types.*/"]
     },
     {
       "groupName": "sveltekit",
-      "matchPackagePatterns": ["@sveltejs"],
-      "matchPackageNames": ["svelte"]
+      "matchPackageNames": ["svelte", "/@sveltejs/"]
     }
   ],
   "rangeStrategy": "bump"
