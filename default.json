@@ -26,8 +26,8 @@
       "matchPackageNames": ["/prettier/"]
     },
     {
-      "extends": ["packages:linters", "packages:test"],
-      "matchPackageNames": ["/@types.*/"]
+      "extends": ["packages:linters"],
+      "matchPackageNames": ["/eslint/"]
     },
     {
       "groupName": "sveltekit",
