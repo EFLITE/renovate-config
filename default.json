@@ -15,7 +15,7 @@
     "group:testNonMajor",
     "workarounds:all"
   ],
-  "schedule": ["before 6am on Monday"],
+  "schedule": ["before 6am"],
   "packageRules": [
     {
       "groupName": "icons",
