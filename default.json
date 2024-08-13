@@ -18,16 +18,13 @@
   "schedule": ["before 6am"],
   "packageRules": [
     {
+      "extends": ["packages:linters", "packages:stylelint"],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
       "groupName": "icons",
       "matchPackageNames": ["/unplugin-icons/", "/@iconify/"]
-    },
-    {
-      "groupName": "prettier",
-      "matchPackageNames": ["/prettier/"]
-    },
-    {
-      "extends": ["packages:linters"],
-      "matchPackageNames": ["/eslint/"]
     },
     {
       "groupName": "sveltekit",
