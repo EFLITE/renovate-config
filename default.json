@@ -16,6 +16,7 @@
     "workarounds:all"
   ],
   "schedule": ["before 6am"],
+  "rangeStrategy": "bump",
   "packageRules": [
     {
       "extends": ["packages:linters", "packages:stylelint"],
@@ -34,6 +35,5 @@
       "groupName": "sveltekit",
       "matchPackageNames": ["svelte", "/@sveltejs/"]
     }
-  ],
-  "rangeStrategy": "bump"
+  ]
 }
