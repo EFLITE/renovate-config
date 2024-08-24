@@ -23,6 +23,10 @@
       "automergeType": "branch"
     },
     {
+      "groupName": "carbon-design-system",
+      "matchPackageNames": ["/@carbon/"]
+    },
+    {
       "groupName": "icons",
       "matchPackageNames": ["/unplugin-icons/", "/@iconify/"]
     },
