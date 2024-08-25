@@ -19,7 +19,7 @@
   "rangeStrategy": "bump",
   "packageRules": [
     {
-      "extends": ["packages:linters", "packages:stylelint"],
+      "extends": ["packages:linters", "packages:stylelint", "schedule:yearly"],
       "automerge": true,
       "automergeType": "branch"
     },
@@ -33,7 +33,7 @@
     },
     {
       "groupName": "sveltekit",
-      "matchPackageNames": ["svelte", "/@sveltejs/"]
+      "matchPackageNames": ["svelte", "svelte-check", "/@sveltejs/"]
     }
   ]
 }
