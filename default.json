@@ -8,9 +8,7 @@
     ":separateMultipleMajorReleases",
     ":timezone(Asia/Tokyo)",
     ":label(renovate)",
-    "group:definitelyTyped",
     "group:monorepos",
-    "group:linters",
     "group:recommended",
     "group:testNonMajor",
     "workarounds:all"
@@ -20,6 +18,14 @@
   "packageRules": [
     {
       "extends": ["packages:linters", "packages:stylelint", "schedule:yearly"],
+      "groupName": "linters",
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "extends": ["schedule:yearly"],
+      "groupName": "definitelyTyped",
+      "matchPackageNames": ["@types/**"],
       "automerge": true,
       "automergeType": "branch"
     },
