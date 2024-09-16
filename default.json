@@ -18,6 +18,7 @@
   "packageRules": [
     {
       "extends": ["packages:linters", "packages:stylelint", "schedule:yearly"],
+      "matchPackageNames": ["/eslint/"],
       "groupName": "linters",
       "automerge": true,
       "automergeType": "branch"
