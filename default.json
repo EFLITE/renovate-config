@@ -11,8 +11,10 @@
     "group:monorepos",
     "group:recommended",
     "group:testNonMajor",
+    "replacements:all",
     "workarounds:all"
   ],
+  "configMigration": true,
   "schedule": ["before 6am"],
   "rangeStrategy": "bump",
   "packageRules": [
@@ -31,12 +33,12 @@
       "automergeType": "branch"
     },
     {
-      "groupName": "carbon-design-system",
-      "matchPackageNames": ["/@carbon/"]
-    },
-    {
       "groupName": "icons",
       "matchPackageNames": ["/unplugin-icons/", "/@iconify/"]
+    },
+    {
+      "groupName": "vite",
+      "matchPackagePatterns": ["vite"]
     },
     {
       "groupName": "sveltekit",
