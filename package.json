@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "renovate": "^40.1.1"
+    "renovate": "^40.1.3"
   }
 }
